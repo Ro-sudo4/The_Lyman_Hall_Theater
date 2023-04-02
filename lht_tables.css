@@ -14,9 +14,55 @@
 */
 
 /* ===============================
-   Mobile Styles: 0px to 640px 
+   Mobile Styles: 640px 
    ===============================
 */
+
+@media only screen and (max-width: 640px) {
+  table,
+  tbody,
+  tr,
+  td,
+  th,
+  caption {
+    display: block;
+  }
+
+  thead tr {
+    display: none;
+  }
+
+  caption {
+    background-color: gray;
+    color: white;
+    font-size: 1.5 em;
+    line-height: 2em;
+  }
+
+  td {
+    border-style: dotted;
+    border-color: gray;
+    border-width: 1px;
+    color: rgb(11, 12, 145);
+    position: relative;
+    padding-left: 40%;
+    min-height: 40px;
+  }
+
+  table tr:nth-of-type(odd) {
+    background-color: rgb(255, 235, 178);
+    border: 2px solid gray;
+  }
+
+  [data-date]::before {
+    content: attr(data-date);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    padding: 5px;
+  }
+}
 
 /* =============================================
    Tablet and Desktop Styles: greater than 640px
